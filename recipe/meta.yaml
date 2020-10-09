@@ -18,17 +18,18 @@ build:
 
 requirements:
   host:
-    - python >=3.6,<3.8
+    - python >=3.6,<3.9
     - pip
   run:
-    - python >=3.6,<3.8
+    - python >=3.6,<3.9
     - requests
     - setuptools
     - importlib_resources
-    - tensorflow-gpu ==1.14.0
-    - pandas ==0.25.1
+    - tensorflow-gpu ==2.3.0
+    - pandas==1.1.2
     - ffmpeg-python
-    - norbert
+    - norbert==0.2.1
+    - librosa==0.8.0
 
 test:
   imports:
