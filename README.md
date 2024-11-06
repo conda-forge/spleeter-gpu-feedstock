@@ -5,11 +5,13 @@ Home: https://github.com/deezer/spleeter
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/spleeter-gpu-feedstock/blob/master/LICENSE.txt)
 
 Summary: The Deezer source separation library with pretrained models based on tensorflow.
 
+Development: https://github.com/deezer/spleeter
 
+Documentation: https://github.com/deezer/spleeter/wiki
 
 Current build status
 ====================
