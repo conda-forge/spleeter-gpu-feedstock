@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  - url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
     sha256: dc9c6f2a4f092c93565368c66ba2efa7c2ac82e0cc698a8f3ec8c4f6ff7714ee
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
   entry_points:
@@ -18,10 +18,10 @@ build:
 
 requirements:
   host:
-    - python >=3.6,<3.8
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.6,<3.8
+    - python >={{ python_min }},<3.8
     - requests
     - setuptools
     - importlib_resources
@@ -31,6 +31,8 @@ requirements:
     - norbert
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - spleeter
 
