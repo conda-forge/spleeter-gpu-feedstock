@@ -1,5 +1,5 @@
 {% set name = "spleeter-gpu" %}
-{% set version = "1.5.3" %}
+{% set version = "2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-    sha256: dc9c6f2a4f092c93565368c66ba2efa7c2ac82e0cc698a8f3ec8c4f6ff7714ee
+    sha256: c7a4fc710e84ea033eaecdc1f30f61834c5ffda669f4e553cf01fc1bdc5f3469
 
 build:
   number: 0
@@ -18,17 +18,18 @@ build:
 
 requirements:
   host:
-    - python >=3.6,<3.8
+    - python >=3.6,<3.9
     - pip
   run:
-    - python >=3.6,<3.8
+    - python >=3.6,<3.9
     - requests
     - setuptools
     - importlib_resources
-    - tensorflow-gpu ==1.14.0
-    - pandas ==0.25.1
+    - tensorflow-gpu ==2.3.0
+    - pandas ==1.1.2
     - ffmpeg-python
-    - norbert
+    - norbert ==0.2.1
+    - librosa ==0.8.0
 
 test:
   imports:
