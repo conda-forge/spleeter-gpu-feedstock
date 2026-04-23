@@ -1,5 +1,5 @@
 {% set name = "spleeter-gpu" %}
-{% set version = "1.5.3" %}
+{% set version = "2.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-    sha256: dc9c6f2a4f092c93565368c66ba2efa7c2ac82e0cc698a8f3ec8c4f6ff7714ee
+    sha256: 9d7be1e30dbbc5ea3e2004966ccaa405c047d2c40a4148e056ee4b7036ec63c5
 
 build:
   number: 0
